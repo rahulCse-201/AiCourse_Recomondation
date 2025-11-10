@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Course Recommender 🎓</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <h2>AI Course Recommender</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#form">Get Recommendation</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>🎯 Find the Best Courses Tailored for You</h1>
+      <p>
+        Get personalized learning recommendations powered by AI — based on your academic performance and interests.
+      </p>
+      <a href="#form" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <section id="form" class="form-section">
+    <h2>🧠 Student Profile</h2>
+    <form id="recommenderForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label for="branch">Select Branch:</label>
+      <select id="branch" required>
+        <option value="">-- Select --</option>
+        <option value="cse">Computer Science</option>
+        <option value="it">Information Technology</option>
+        <option value="ece">Electronics & Communication</option>
+        <option value="mech">Mechanical</option>
+        <option value="civil">Civil</option>
+      </select>
+
+      <label for="semester">Current Semester:</label>
+      <select id="semester" required>
+        <option value="">-- Select --</option>
+        <option value="1">1st</option>
+        <option value="2">2nd</option>
+        <option value="3">3rd</option>
+        <option value="4">4th</option>
+        <option value="5">5th</option>
+        <option value="6">6th</option>
+        <option value="7">7th</option>
+        <option value="8">8th</option>
+      </select>
+
+      <label for="marks">Average Marks (%):</label>
+      <input type="number" id="marks" min="0" max="100" placeholder="e.g. 75" required />
+
+      <label for="interests">Your Interests (comma separated):</label>
+      <input type="text" id="interests" placeholder="e.g. AI, Web Development, Database" required />
+
+      <button type="submit" class="btn">🔍 Get Recommendations</button>
+    </form>
+    
+    <div id="output"></div>
+  </section>
+  
+  <section id="extra-sections">
+  <div class="trending-section">
+    <h2>🔥 Trending Courses</h2>
+    <div id="trending-list"></div>
+  </div>
+
+  <div class="top-rated-section">
+    <h2>🏆 Top Rated Courses</h2>
+    <div id="top-rated-list"></div>
+  </div>
+</section>
+
+<!-- 🪟 Course Details Modal -->
+<div id="courseModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2 id="modalName"></h2>
+    <p><strong>Level:</strong> <span id="modalLevel"></span></p>
+    <p><strong>Rating:</strong> ⭐ <span id="modalRating"></span></p>
+    <p><strong>Tags:</strong> <span id="modalTags"></span></p>
+    <a id="modalLink" href="#" target="_blank" class="learn-more">Learn More</a>
+  </div>
+</div>
+
+
+  <section id="about" class="about">
+    <h2>About This Project</h2>
+    <p>
+      This AI-based Course Recommender analyzes your interests, marks, and branch to suggest 
+      the most relevant online courses for your learning path.
+    </p>
+  </section>
+
+
+ <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>AI Course Recommender 🎓</h3>
+      <p>Empowering students with personalized learning paths through AI-driven recommendations.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#form">Get Recommendations</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Connect</h4>
+      <p>💌 <a href="mailto:nikhil@example.com">nikhil@example.com</a></p>
+      <p>💻 Created by <strong>Tech Coders</strong></p>
+      <div class="socials">
+        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"></a>
+        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 AI Course Recommender | All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
